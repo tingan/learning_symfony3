@@ -26,7 +26,8 @@ class ReservationsController extends Controller
    **/
     public function book(Request $request, $id_client)
     {
-      return $this->render("reservations/book.html.twig");
+      $data['id_client'] = $id_client;
+      return $this->render("reservations/book.html.twig", $data);
 
     }
     
